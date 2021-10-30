@@ -63,19 +63,13 @@ def get_url_list():
             # iterates through each peice of html and will check if the regex below matches with anything.
             for link in text_with_link:
                 # turning the html to a string
-                link_ispy = str(text_with_link)
+                link_ispy = str(link)
                 # setting all the links to match
                 match = re.search(r'(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-]\w+)', link_ispy)
                 # checks if match is null and only passes through non null values
                 if match is not None:
                     link_list.append(match.group(0))
     return link_list
-
-REPOS = [
-    "gocodeup/codeup-setup-script",
-    "gocodeup/movies-application",
-    "torvalds/linux",
-]
 
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
 
