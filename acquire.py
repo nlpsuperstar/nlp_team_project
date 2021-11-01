@@ -71,6 +71,16 @@ def get_url_list():
                     link_list.append(match.group(0))
     return link_list
 
+def clean_repos(REPOS):
+    '''
+    Cleans the repository list after being pulled in from the get_url_list function
+    '''
+    REPOS = list(set(REPOS))
+    repositories = []
+    for repo in REPOS:
+        repositories.append(repo[19:])
+    return repositories
+
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
 
 if headers["Authorization"] == "token " or headers["User-Agent"] == "":
