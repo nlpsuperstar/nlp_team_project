@@ -10,7 +10,7 @@ from typing import Dict, List, Optional, Union, cast
 
 from env import github_token, github_username
 
-REPOS ['thedaviddias/Front-End-Checklist',
+REPOS = ['thedaviddias/Front-End-Checklist',
  'onevcat/Kingfisher',
  'FallibleInc/security-guide-for-developers',
  'tailwindlabs/tailwindcss',
