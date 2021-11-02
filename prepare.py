@@ -5,6 +5,7 @@ import json
 import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
+from bs4 import BeautifulSoup 
 
 import pandas as pd
 
