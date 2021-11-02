@@ -6,6 +6,8 @@ import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
 
+from sklearn.model_selection import train_test_split
+
 import pandas as pd
 '''
 def basic_clean(string):
@@ -138,6 +140,7 @@ def prep_readme_data(df, column, extra_words=[], exclude_words=[]):
     
     return df[[column,'repo','language','clean', 'stemmed', 'lemmatized']]
 
+<<<<<<< HEAD
 def get_columns(df):
     '''
     Adds a message length column and word count column
@@ -147,3 +150,23 @@ def get_columns(df):
     df['word_count'] = df.clean.apply(str.split).apply(len)
 
     return df
+=======
+def data_split(df, target):
+    '''
+    This function takes in the zillow dataframe and performs a train test split
+    Returns train, test, X_train, y_train, X_test, y_test as partitions
+    and prints out the shape of train & test
+    '''
+    #create train and test datasets
+    train, test = train_test_split(df, train_size = 0.8, random_state = 123)
+
+    #Split into X and y
+    X_train = train.drop(columns=[target])
+    y_train = train[target]
+
+    X_test = test.drop(columns=[target])
+    y_test = test[target]
+   
+    return X_train, X_test, y_train, y_test
+
+>>>>>>> cd9c5b0 (added train test function)
