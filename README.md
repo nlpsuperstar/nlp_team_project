@@ -1,5 +1,5 @@
-# Finding Drivers of Zestimate Errors
-![](https://github.com/ray-zapata/project_clustering_zillow/blob/main/assets/logo.jpg)
+# Predicting Coding Language - Classification Project
+
 
 ### Table of Contents
 ---
@@ -29,11 +29,7 @@ V.   [Modules                      ](#v-modules)
 
 VI.  [Project Reproduction         ](#vi-project-reproduction)
 
-<br>
 
-![](https://github.com/ray-zapata/project_clustering_zillow/blob/main/assets/divider.png)
-
-<br>
 
 ### I. Project Overview
 ---
@@ -75,7 +71,7 @@ Due to the scope and time frame of this project, it was not attempted to go into
 
 The Codeup `zillow` SQL database contains twelve tables, nine of which have foreign key links with our primary table `properties_2017`: `airconditioningtype`, `architecturalstyletype`, `buildingclasstype`, `heatingorsystemtype`, `predictions_2017`, `propertylandusetype`, `storytype`, `typeconstructiontype`, and `unique_properties`. Each table is connected by a pointed arrow with the corresponding foreign keys that link them. Many of these tables are unused in this project due to missing values, and this database map serves only to define the database.
 
-![](https://github.com/ray-zapata/project_clustering_zillow/blob/main/assets/databasemap.png)
+
 
 #### 2. Data Dictionary
 
