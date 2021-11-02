@@ -9,20 +9,7 @@ from nltk.corpus import stopwords
 from sklearn.model_selection import train_test_split
 
 import pandas as pd
-'''
-def basic_clean(string):
-    '''
-    '''
-    This function takes in a string and
-    returns the string normalized.
-    '''
-    '''
-    string = unicodedata.normalize('NFKD', string)\
-             .encode('ascii', 'replace')\
-             .decode('utf-8', 'ignore')
-    string = re.sub(r'[^\w\s]', '', string).lower()
-    return string
-'''
+
 
 def basic_clean(words):
     original = ' '.join(words)
@@ -140,7 +127,6 @@ def prep_readme_data(df, column, extra_words=[], exclude_words=[]):
     
     return df[[column,'repo','language','clean', 'stemmed', 'lemmatized']]
 
-<<<<<<< HEAD
 def get_columns(df):
     '''
     Adds a message length column and word count column
@@ -149,8 +135,11 @@ def get_columns(df):
 
     df['word_count'] = df.clean.apply(str.split).apply(len)
 
+    df['avg_word_length'] = df.message_length/df.word_count
+
     return df
-=======
+
+
 def data_split(df, target):
     '''
     This function takes in the zillow dataframe and performs a train test split
@@ -169,4 +158,3 @@ def data_split(df, target):
    
     return X_train, X_test, y_train, y_test
 
->>>>>>> cd9c5b0 (added train test function)
