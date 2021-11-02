@@ -93,7 +93,7 @@ def prep_readme_data(df, column, extra_words=[], exclude_words=[]):
     '''
     This function take in a df and the string name for a text column with 
     option to pass lists for extra_words and exclude_words and
-    returns a df with the text article title, original text, stemmed text,
+    returns a df with the readme text, original text, stemmed text,
     lemmatized text, cleaned, tokenized, & lemmatized text with stopwords removed.
     '''
     df['clean'] = df[column].apply(basic_clean)\
@@ -117,3 +117,13 @@ def prep_readme_data(df, column, extra_words=[], exclude_words=[]):
                                    exclude_words=exclude_words)
     
     return df[[column,'repo','language','clean', 'stemmed', 'lemmatized']]
+
+def get_columns(df):
+    '''
+    Adds a message length column and word count column
+    '''
+    df['message_length'] = df.clean.apply(len)
+
+    df['word_count'] = df.clean.apply(str.split).apply(len)
+
+    return df
