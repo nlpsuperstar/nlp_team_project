@@ -15,3 +15,4 @@ __pycache__/
 .ipynb_checkpoints/
 >>>>>>> a36a10bdd8619b08fa9539c146b0ce9afdf69d30
 >>>>>>> b72466b30caa2252ae42084f89f8f888f6f2d283
+*.json
