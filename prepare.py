@@ -7,17 +7,37 @@ from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
 
 import pandas as pd
-
+'''
 def basic_clean(string):
+    '''
     '''
     This function takes in a string and
     returns the string normalized.
+    '''
     '''
     string = unicodedata.normalize('NFKD', string)\
              .encode('ascii', 'replace')\
              .decode('utf-8', 'ignore')
     string = re.sub(r'[^\w\s]', '', string).lower()
     return string
+'''
+
+def basic_clean(words):
+    original = ' '.join(words)
+    text = original.lower()
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8', 'ignore')
+    text = re.sub(r"[^a-z0-9'\s]", '', text)
+    wnl = nltk.stem.WordNetLemmatizer()
+    lemmas = [wnl.lemmatize(word) for word in text.split()]
+    text_lemma = ' '.join(lemmas)
+    stopwords = nltk.corpus.stopwords.words('english')
+    newStopWords = ['u','ha','wa']
+    stopwords.extend(newStopWords)
+    words = text_lemma.split()
+    filtered_words = [w for w in words if w not in stopwords]
+    speech = ' '.join(filtered_words)
+
+    return speech
 
 def tokenize(string):
     '''
