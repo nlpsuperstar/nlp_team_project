@@ -6,14 +6,12 @@ import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
 
-from sklearn.model_selection import train_test_split
-
 import pandas as pd
 
-
-def basic_clean(words):
-    original = ' '.join(words)
-    text = original.lower()
+def basic_clean(text):
+    text = text.lower()
+    soup = BeautifulSoup(text,'html.parser')
+    text = soup.get_text()
     text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8', 'ignore')
     text = re.sub(r"[^a-z0-9'\s]", '', text)
     wnl = nltk.stem.WordNetLemmatizer()
@@ -135,10 +133,9 @@ def get_columns(df):
 
     df['word_count'] = df.clean.apply(str.split).apply(len)
 
-    df['avg_word_length'] = df.message_length/df.word_count
+    df['avg_word_length'] = df.message_length / df.word_count
 
     return df
-
 
 def data_split(df, target):
     '''
@@ -157,4 +154,3 @@ def data_split(df, target):
     y_test = test[target]
    
     return X_train, X_test, y_train, y_test
-
