@@ -188,11 +188,6 @@ The created modules used in this project below contain full comments an docstrin
 
 To recreate and reproduce results of this project, you will need to create a module named `env.py`. This file will need to contain login credentials for the Codeup database server stored in their respective variables named `host`, `username`, and `password`. You will also need to create the following function within. This is used in all functions that acquire data from the SQL server to create the URL for connecting. `db_name` needs to be passed as a string that matches exactly with the name of a database on the server.
 
-```py
-def get_connection(db_name):
-    return f'mysql+pymysql://{username}:{password}@{host}/{db_name}'
-```
-
 After its creation, ensure this file is not uploaded or leaked by ensuring git does not interact with it. When using any function housed in the created modules above, ensure full reading of comments and docstrings to understand its proper use and passed arguments or parameters.
 
 [[Return to Top]](#finding-drivers-of-zestimate-errors)
