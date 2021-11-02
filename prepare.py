@@ -14,7 +14,7 @@ def basic_clean(string):
     returns the string normalized.
     '''
     string = unicodedata.normalize('NFKD', string)\
-             .encode('ascii', 'ignore')\
+             .encode('ascii', 'replace')\
              .decode('utf-8', 'ignore')
     string = re.sub(r'[^\w\s]', '', string).lower()
     return string
