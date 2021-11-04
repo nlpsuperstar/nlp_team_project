@@ -61,6 +61,8 @@ Using Natural Language Processing techniques such as stemming, lemmatization, se
 
 With a baseline of ~60.5%, we were able to create machine learning models that were able to successfuly predict whether or not a repository was written in JavaScript or not with an accuracy of 81.94%. The features given to our models were the "clean", "stemmed" and "lemmatized" versions of our data, and our top performing model was a Multinomial Naive Bayes model.
 
+Moving forward, we would like to try and implement word count and word length to our models. We would also like to see how our models perform on different repositories on GitHub such as top trending or by topic.
+
 ### III. Data Context
 ---
 
