@@ -48,7 +48,7 @@ For this project, we scraped data from GitHub repository README files. Our goal 
 
 #### 1. Goals
 
-Our goal was to build a model that can predict what programming language a repository is, given the text of the README file. Our data was acquired by scraping the starred repos on GitHub. We brought in 506 observations and based on the distribution of the languages, we decided to see if we can predict if the main language of the repositories was JavaScript or not.
+Our goal was to build a model that can predict which programming language a repository is in, given the text of the README file. Our data was acquired by scraping the starred repos on GitHub. We brought in 506 observations and based on the distribution of the languages, we decided to see if we can predict if the main language of the repositories was JavaScript or not.
 
 #### 2. Initial Thoughts & Hypothesis
 
@@ -59,7 +59,7 @@ We knew JavaScript is one of the most popular programming languages used for a v
 
 Using Natural Language Processing techniques such as stemming, lemmatization, sentiment analysis and word distributions amongst the different languages, we were able to analyze and compare repositories written in JavaScript to those not written in JavaScript. Through our analysis, we found the most frequently used words used by repositories written in JavaSript versus those not written in JavaScript, most frequently used bigrams, created word clouds, as well as sentiment analysis.
 
-With a baseline of ~60.5%, we were able to create machine learning models that were able to successfuly predict whether or not a repository was written in JavaScript or not with an accuracy of 77.78%. The features given to our models were the clean, stemmed and lemmatized versions of our data, and our top performing model was Mulinomial Naive Bayes model.
+With a baseline of ~60.5%, we were able to create machine learning models that were able to successfuly predict whether or not a repository was written in JavaScript or not with an accuracy of 77.78%. The features given to our models were the "clean", "stemmed" and "lemmatized" versions of our data, and our top performing model was a Multinomial Naive Bayes model.
 
 ### III. Data Context
 ---
