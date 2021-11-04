@@ -57,7 +57,7 @@ We knew JavaScript is one of the most popular programming languages used for a v
 
 #### 3. Findings & Next Phase
 
-Using Natural Language Processing techniques such as stemming, lemmatization, sentiment analysis and word distributions amongst the different languages, we were able to analyze and compare repositories written in JavaScript to those not written in JavaScript. Through our analysis, we found the most frequently used words used by repositories written in JavaSript versus those not written in JavaScript, most frequently used bigrams, created word clouds, as well as sentiment analysis
+Using Natural Language Processing techniques such as stemming, lemmatization, sentiment analysis and word distributions amongst the different languages, we were able to analyze and compare repositories written in JavaScript to those not written in JavaScript. Through our analysis, we found the most frequently used words used by repositories written in JavaSript versus those not written in JavaScript, most frequently used bigrams, created word clouds, as well as sentiment analysis.
 
 With a baseline of ~60.5%, we were able to create machine learning models that were able to successfuly predict whether or not a repository was written in JavaScript or not with an accuracy of 77.78%. The features given to our models were the clean, stemmed and lemmatized versions of our data, and our top performing model was Mulinomial Naive Bayes model.
 
@@ -154,11 +154,9 @@ The created modules used in this project below contain full comments an docstrin
 
 - [`acquire`](https://github.com/nlpsuperstar/nlp_team_project/blob/master/acquire.py): contains functions to web scrape the data off of GitHub. We've also included the list of repositories we decided to use for our particular project.
 - [`prepare`](https://github.com/nlpsuperstar/nlp_team_project/blob/master/prepare.py): contains functions used to prepare readme contents for NLP analysis.
-- [`modeling`  ](https://github.com/nlpsuperstar/nlp_team_project/blob/master/modeling.py): contains functions to create, test models and visualize their performance
+- [`modeling`  ](https://github.com/nlpsuperstar/nlp_team_project/blob/master/modeling.py): contains functions to create, test models and visualize their performance.
 
 ### VI. Project Reproduction
 ---
 
-To recreate and reproduce results of this project, you will need a GitHub account, obtain your own GitHub token, and store it in an env.py file. You will also need all of the modules listed above to either webscrape a new list of repositories, or use our existing list, "REPOS", contained in the acquire.py script 
-
-[[Return to Top]](##table-of-contents)
+To recreate and reproduce results of this project, you will need a GitHub account, obtain your own GitHub token, and store it in an env.py file. You will also need all of the modules listed above to either webscrape a new list of repositories, or use our existing list, "REPOS", contained in the acquire.py script.
