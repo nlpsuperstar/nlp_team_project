@@ -58,8 +58,8 @@ def model_report(y_true, y_pred):
             *** Model  Report ***  
             ---------------------              
  _____________________________________________
-|   Positive Case: is javascript = 'false'    |
-|   Negative Case: is javascript = 'true'     |
+|   Positive Case: is javascript = 'true'    |
+|   Negative Case: is javascript = 'false'     |
 |---------------------------------------------|
 |                 Accuracy: {report_dict['accuracy']:>8.2%}          |
 |       True Positive Rate: {cmatrix_dict['tpr']:>8.2%}          |

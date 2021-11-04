@@ -59,7 +59,7 @@ We knew JavaScript is one of the most popular programming languages used for a v
 
 Using Natural Language Processing techniques such as stemming, lemmatization, sentiment analysis and word distributions amongst the different languages, we were able to analyze and compare repositories written in JavaScript to those not written in JavaScript. Through our analysis, we found the most frequently used words used by repositories written in JavaSript versus those not written in JavaScript, most frequently used bigrams, created word clouds, as well as sentiment analysis.
 
-With a baseline of ~60.5%, we were able to create machine learning models that were able to successfuly predict whether or not a repository was written in JavaScript or not with an accuracy of 77.78%. The features given to our models were the "clean", "stemmed" and "lemmatized" versions of our data, and our top performing model was a Multinomial Naive Bayes model.
+With a baseline of ~60.5%, we were able to create machine learning models that were able to successfuly predict whether or not a repository was written in JavaScript or not with an accuracy of 81.94%. The features given to our models were the "clean", "stemmed" and "lemmatized" versions of our data, and our top performing model was a Multinomial Naive Bayes model.
 
 ### III. Data Context
 ---
@@ -150,7 +150,7 @@ DataFrames used in this project contain the following variables.
 ### V. Modules
 ---
 
-The created modules used in this project below contain full comments an docstrings to better understand their operation. Where applicable, all functions used `random_state=19` at all times. Use of functions requires access credentials to the Codeup database and an additional module named `env.py`. See project reproduction for more detail.
+The created modules used in this project below contain full comments an docstrings to better understand their operation. Where applicable, all functions used `random_state=123` at all times. Use of functions requires access credentials to the Codeup database and an additional module named `env.py`. See project reproduction for more detail.
 
 - [`acquire`](https://github.com/nlpsuperstar/nlp_team_project/blob/master/acquire.py): contains functions to web scrape the data off of GitHub. We've also included the list of repositories we decided to use for our particular project.
 - [`prepare`](https://github.com/nlpsuperstar/nlp_team_project/blob/master/prepare.py): contains functions used to prepare readme contents for NLP analysis.
