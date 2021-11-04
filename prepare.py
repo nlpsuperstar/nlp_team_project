@@ -138,6 +138,18 @@ def get_columns(df):
 
     return df
 
+def is_javascript(row):
+    if row['language'] == 'JavaScript':
+        return True
+    else:
+        return False
+
+def clean(text):
+    '''Simplified text cleaning function'''
+    text = text.lower()
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8', 'ignore')
+    return re.sub(r"[^a-z0-9\s]", '', text)
+
 def data_split(df, target):
     '''
     This function takes in the zillow dataframe and performs a train test split
