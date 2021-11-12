@@ -153,7 +153,7 @@ DataFrames used in this project contain the following variables.
 ### V. Modules
 ---
 
-The created modules used in this project below contain full comments an docstrings to better understand their operation. Where applicable, all functions used `random_state=19` at all times. Use of functions requires access credentials to the Codeup database and an additional module named `env.py`. See project reproduction for more detail.
+The created modules used in this project below contain full comments an docstrings to better understand their operation. Where applicable, all functions used `random_state=123` at all times. Use of functions requires access credentials to the Codeup database and an additional module named `env.py`. See project reproduction for more detail.
 
 - [`acquire`](https://github.com/nlpsuperstar/nlp_team_project/blob/master/acquire.py): contains functions to web scrape the data off of GitHub. We've also included the list of repositories we decided to use for our particular project.
 - [`prepare`](https://github.com/nlpsuperstar/nlp_team_project/blob/master/prepare.py): contains functions used to prepare readme contents for NLP analysis.

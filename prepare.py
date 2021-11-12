@@ -6,6 +6,7 @@ import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 from nltk.corpus import stopwords
 from bs4 import BeautifulSoup 
+from sklearn.model_selection import train_test_split
 
 import pandas as pd
 
@@ -157,13 +158,19 @@ def data_split(df, target):
     and prints out the shape of train & test
     '''
     #create train and test datasets
-    train, test = train_test_split(df, train_size = 0.8, random_state = 123)
+    train, test = train_test_split(df, train_size = 0.8, random_state = 123, stratify = df[target])
 
     #Split into X and y
-    X_train = train.drop(columns=[target])
+    X_train_clean = train.clean
+    X_train_stemmed = train.stemmed
+    X_train_lemmatized = train.lemmatized
+    
     y_train = train[target]
 
-    X_test = test.drop(columns=[target])
+    X_test_clean = test.clean
+    X_test_stemmed = test.stemmed
+    X_test_lemmatized = test.lemmatized
+    
     y_test = test[target]
    
-    return X_train, X_test, y_train, y_test
+    return X_train_clean, X_train_stemmed, X_train_lemmatized, y_train, X_test_clean, X_test_stemmed, X_test_lemmatized, y_test
